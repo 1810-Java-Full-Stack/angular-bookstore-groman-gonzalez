@@ -1,0 +1,30 @@
+<h2>All books</h2>
+<div>
+
+  <ul class="books">
+    <li *ngFor="let b of books"
+      [class.select]="b === allBooks"
+      (click)="getBook(b)">
+      <span class="badge">{{b.id}}</span> Title: {{b.title}}, Author: {{b.author}}
+    </li>
+  </ul>
+</div>
+
+
+
+<div *ngIf="allBooks">
+  <h2>{{allBooks.title}} Details</h2>
+  <div><span>id: </span>{{allBooks.id}}</div>
+  <div>
+    <label>title:
+      <input [(ngModel)]="allBooks.title" placeholder="title" />
+    </label>
+  </div>
+  <div>
+    <label>Author:
+      <input [(ngModel)]="allBooks.author" placeholder="author" />
+    </label>
+  </div>
+
+
+</div>
