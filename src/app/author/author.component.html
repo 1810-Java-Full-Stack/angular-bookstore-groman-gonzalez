@@ -1,0 +1,7 @@
+<div *ngIf="this.author != null">
+  <h1 class="display-4">Author: {{this.author.author}}</h1>
+  <div class="input-group">
+    <textarea class="form-control" aria-label="textarea" [(ngModel)]="this.author.bio"></textarea>
+  </div>
+  <button type="btn btn-primary" (click)="addAuthor()" class="btn btn-primary">Update Author</button>
+</div>

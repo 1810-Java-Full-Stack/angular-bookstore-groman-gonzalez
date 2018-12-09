@@ -1,0 +1,13 @@
+<div *ngIf="this.bList">
+
+  <div>
+  <ul>
+    <li *ngFor="let book of bList">
+      <a routerLink="/book/{{book.id}}">{{ book.title }}</a>
+    </li>
+  </ul>
+  </div>
+  
+  </div>
+
+<a routerLink="/main">Go Back Home</a>
